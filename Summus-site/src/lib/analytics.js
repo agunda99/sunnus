@@ -1,15 +1,14 @@
 // Lightweight analytics helper — safe to call even before GA is loaded.
 export function track(eventName, params = {}) {
-  if (typeof window === "undefined") return;
-  if (typeof window.gtag === "function") {
-    window.gtag("event", eventName, {
+  if (typeof window === 'undefined') return;
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', eventName, {
       ...params,
-      send_to: import.meta.env.VITE_GA_ID || "G-XXXXXXXXXX",
+      send_to: import.meta.env.VITE_GA_ID || 'G-XXXXXXXXXX',
     });
   }
   if (import.meta.env.DEV) {
-    // eslint-disable-next-line no-console
-    console.debug("[analytics]", eventName, params);
+    console.debug('[analytics]', eventName, params);
   }
 }
 
@@ -22,10 +21,10 @@ export function trackScrollDepth() {
     marks.forEach((m) => {
       if (pct >= m && !fired.has(m)) {
         fired.add(m);
-        track("scroll_depth", { percent: m });
+        track('scroll_depth', { percent: m });
       }
     });
   };
-  window.addEventListener("scroll", onScroll, { passive: true });
-  return () => window.removeEventListener("scroll", onScroll);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  return () => window.removeEventListener('scroll', onScroll);
 }
