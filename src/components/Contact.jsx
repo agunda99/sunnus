@@ -41,7 +41,7 @@ export default function Contact() {
               Tell us about your ambition and we’ll map the fastest route from brand direction to operating confidence.
             </p>
             <div className="flex flex-wrap gap-4 text-sm">
-              <a href="mailto:hello@msingi.co.ke" className="hover:text-gold">hello@msingi.co.ke</a>
+              <a href="mailto:hello@sunnus.co.ke" className="hover:text-gold">hello@sunnus.co.ke</a>
               <span className="text-paper/30">|</span>
               <a href="tel:+254700000000" className="hover:text-gold">+254 700 000 000</a>
             </div>
