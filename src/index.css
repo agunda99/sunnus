@@ -98,6 +98,29 @@
     transform: translate3d(0, 40px, 0);
     will-change: transform, opacity;
   }
+
+  .floating-cta__option:nth-child(1) { animation-delay: 40ms; }
+  .floating-cta__option:nth-child(2) { animation-delay: 100ms; }
+  .floating-cta__option:nth-child(3) { animation-delay: 160ms; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .floating-cta__options {
+      animation: floating-cta-rise 220ms ease-out both;
+    }
+    .floating-cta__option {
+      animation: floating-cta-option 260ms ease-out both;
+    }
+  }
+
+  @keyframes floating-cta-rise {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes floating-cta-option {
+    from { opacity: 0; transform: translateX(10px) scale(0.92); }
+    to { opacity: 1; transform: translateX(0) scale(1); }
+  }
 }
 
 /* Fluid typography utilities */
