@@ -102,6 +102,10 @@
   .floating-cta__option:nth-child(1) { animation-delay: 40ms; }
   .floating-cta__option:nth-child(2) { animation-delay: 100ms; }
   .floating-cta__option:nth-child(3) { animation-delay: 160ms; }
+  .floating-cta__option:nth-child(4) { animation-delay: 220ms; }
+  .floating-cta__options { scrollbar-width: thin; scrollbar-color: rgb(201 169 110 / 0.5) transparent; }
+  .floating-cta__options::-webkit-scrollbar { width: 4px; }
+  .floating-cta__options::-webkit-scrollbar-thumb { background: rgb(201 169 110 / 0.5); border-radius: 9999px; }
 
   @media (prefers-reduced-motion: no-preference) {
     .floating-cta__options {
@@ -120,6 +124,16 @@
   @keyframes floating-cta-option {
     from { opacity: 0; transform: translateX(10px) scale(0.92); }
     to { opacity: 1; transform: translateX(0) scale(1); }
+  }
+
+  @media (max-height: 420px) {
+    .floating-cta__prompt { margin-bottom: 0.375rem; padding-block: 0.375rem; }
+    .floating-cta__prompt p:last-child { margin-top: 0.125rem; font-size: 0.75rem; }
+    .floating-cta__options { margin-bottom: 0.375rem; max-height: calc(100svh - 7.5rem); }
+    .floating-cta__option { min-height: 2.25rem; }
+    .floating-cta__option > span:first-child { height: 2rem; width: 2rem; }
+    .floating-cta__button { height: 3.5rem; width: 3.5rem; }
+    .floating-cta__button svg { height: 1.5rem; width: 1.5rem; }
   }
 }
 
