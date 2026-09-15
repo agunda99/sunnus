@@ -17,7 +17,7 @@ export default function Works() {
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">
-          {caseStudies.map((item, index) => (
+          {caseStudies.map((item) => (
             <article key={item.title} className="group border border-paper/10 bg-paper/[0.02] p-8 transition hover:border-gold/70">
               <div className="mb-16 flex justify-between">
                 <span className="font-mono text-xs uppercase tracking-[0.25em] text-gold">{item.type}</span>

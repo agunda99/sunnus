@@ -5,6 +5,7 @@ import Problem from './components/Problem'
 import { useLenis } from "./hooks/useLenis";
 import { useEffect } from "react";
 import { trackScrollDepth } from "./lib/analytics";
+import FloatingCTA from "./components/FloatingCTA";
 
 // Below-fold sections load lazily to keep initial bundle tiny.
 const Pillars = lazy(() => import("./components/Pillars"));
@@ -40,6 +41,7 @@ export default function App() {
       <Suspense fallback={null}>
         <Footer />
       </Suspense>
+      <FloatingCTA />
     </>
   );
 }
