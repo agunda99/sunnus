@@ -96,14 +96,14 @@ export default function FloatingCTA() {
 
   return (
     <aside
-      className="group floating-cta fixed bottom-3 right-3 z-30 flex max-h-[calc(100svh-1.5rem)] flex-col items-end rounded-[2rem] border border-paper/10 bg-paper/[0.035] p-2 backdrop-blur-xl sm:bottom-6 sm:right-6 sm:max-h-[calc(100svh-3rem)]"
+      className="group floating-cta fixed bottom-3 right-3 z-30 flex max-h-[calc(100svh-1.5rem)] flex-col items-end sm:bottom-6 sm:right-6 sm:max-h-[calc(100svh-3rem)]"
       aria-label="Start a conversation"
     >
-      <div className="floating-cta__prompt mb-2 mr-1 max-w-[min(calc(100vw-2rem),18rem)] rounded-2xl border border-paper/15 bg-ink/50 px-4 py-2.5 text-right shadow-xl shadow-black/20 backdrop-blur-md sm:mb-3 sm:mr-2">
-        <p className="flex items-center justify-end gap-1.5 font-mono text-[9px] uppercase tracking-[0.18em] text-gold">
+      <div className="floating-cta__prompt mb-2 mr-1 max-w-[min(calc(100vw-2rem),18rem)] px-2 py-1 text-right sm:mb-3 sm:mr-2">
+        <p className="flex items-center justify-end gap-1.5 font-mono text-[8px] uppercase tracking-[0.16em] text-gold">
           <span className="h-1.5 w-1.5 rounded-full bg-sage" /> Online now
         </p>
-        <p className="mt-1 text-sm font-medium text-paper">
+        <p className="mt-1 text-xs font-normal text-paper">
           {intent}{" "}
           <span className="text-gold" aria-hidden="true">
             →
@@ -129,8 +129,8 @@ export default function FloatingCTA() {
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-black/10 [&>svg]:h-[1.1rem] [&>svg]:w-[1.1rem]">
               {contact.icon}
             </span>
-            <span className="text-xs font-medium">{contact.label}</span>
-            <span className="text-xs opacity-60" aria-hidden="true">
+            <span className="text-[11px] font-normal">{contact.label}</span>
+            <span className="text-[11px] font-normal opacity-60" aria-hidden="true">
               ↗
             </span>
           </a>
