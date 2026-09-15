@@ -24,7 +24,7 @@ export default function Hero() {
 
   return (
     <section ref={root} className="relative flex min-h-[100svh] items-center overflow-hidden pt-24">
-      <div className="hero-bg absolute inset-0 -z-10 bg-cover bg-center" style={{ backgroundImage: "linear-gradient(rgba(10,10,11,0.55), rgba(10,10,11,0.85)), url('https://images.unsplash.com/photo-1611348586804-61bf6c080437?auto=format&fit=crop&w=2000&q=70')" }} aria-hidden="true" />
+      <div className="hero-bg absolute inset-0 -z-10 bg-cover bg-center" style={{ backgroundImage: "linear-gradient(90deg, rgba(10,10,11,0.92) 0%, rgba(10,10,11,0.72) 48%, rgba(10,10,11,0.5) 100%), url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2200&q=80')" }} aria-hidden="true" />
 
       <div className="container-x w-full">
         <p className="hero-eyebrow mb-6 font-mono text-xs uppercase tracking-[0.3em] text-gold">
