@@ -13,7 +13,7 @@ const CONTACTS = [
     id: "sms",
     label: "Text message",
     detail: "+254 700 000 000",
-    color: "bg-sage text-ink",
+    color: "bg-sage/85 text-ink",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path
@@ -29,7 +29,7 @@ const CONTACTS = [
     id: "whatsapp",
     label: "WhatsApp",
     detail: "Message us directly",
-    color: "bg-[#25D366] text-white",
+    color: "bg-[#25D366]/85 text-white",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path
@@ -45,7 +45,7 @@ const CONTACTS = [
     id: "telegram",
     label: "Telegram",
     detail: "Start a Telegram chat",
-    color: "bg-[#229ED9] text-white",
+    color: "bg-[#229ED9]/85 text-white",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path
@@ -61,7 +61,7 @@ const CONTACTS = [
     id: "email",
     label: "Email",
     detail: "hello@sunnus.co.ke",
-    color: "bg-paper text-ink",
+    color: "bg-paper/85 text-ink",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path
@@ -96,10 +96,10 @@ export default function FloatingCTA() {
 
   return (
     <aside
-      className="group floating-cta fixed bottom-3 right-3 z-30 flex max-h-[calc(100svh-1.5rem)] flex-col items-end sm:bottom-6 sm:right-6 sm:max-h-[calc(100svh-3rem)]"
+      className="group floating-cta fixed bottom-3 right-3 z-30 flex max-h-[calc(100svh-1.5rem)] flex-col items-end rounded-[2rem] border border-paper/10 bg-paper/[0.035] p-2 backdrop-blur-xl sm:bottom-6 sm:right-6 sm:max-h-[calc(100svh-3rem)]"
       aria-label="Start a conversation"
     >
-      <div className="floating-cta__prompt mb-2 mr-1 max-w-[min(calc(100vw-2rem),18rem)] rounded-2xl border border-paper/15 bg-ink/85 px-4 py-2.5 text-right shadow-xl shadow-black/20 backdrop-blur-md sm:mb-3 sm:mr-2">
+      <div className="floating-cta__prompt mb-2 mr-1 max-w-[min(calc(100vw-2rem),18rem)] rounded-2xl border border-paper/15 bg-ink/50 px-4 py-2.5 text-right shadow-xl shadow-black/20 backdrop-blur-md sm:mb-3 sm:mr-2">
         <p className="flex items-center justify-end gap-1.5 font-mono text-[9px] uppercase tracking-[0.18em] text-gold">
           <span className="h-1.5 w-1.5 rounded-full bg-sage" /> Online now
         </p>
@@ -124,7 +124,7 @@ export default function FloatingCTA() {
             onClick={() => handleContact(contact.id)}
             title={`${contact.label}: ${contact.detail}`}
             aria-label={`${contact.label}: ${contact.detail}`}
-            className={`floating-cta__option flex items-center gap-2 ${contact.color} rounded-full p-1 pr-2.5 shadow-lg shadow-black/30 transition-all hover:-translate-x-1 hover:brightness-110`}
+            className={`floating-cta__option flex items-center gap-2 ${contact.color} rounded-full border border-white/20 p-1 pr-2.5 shadow-lg shadow-black/30 backdrop-blur-md transition-all hover:-translate-x-1 hover:brightness-110`}
           >
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-black/10 [&>svg]:h-[1.1rem] [&>svg]:w-[1.1rem]">
               {contact.icon}
